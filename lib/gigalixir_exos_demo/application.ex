@@ -9,11 +9,12 @@ defmodule GigalixirExosDemo.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      GigalixirExosDemo.Repo,
+      # GigalixirExosDemo.Repo,
       # Start the endpoint when the application starts
-      GigalixirExosDemoWeb.Endpoint
+      GigalixirExosDemoWeb.Endpoint,
       # Starts a worker by calling: GigalixirExosDemo.Worker.start_link(arg)
       # {GigalixirExosDemo.Worker, arg},
+      {GigalixirExosDemo.Account, 0}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
