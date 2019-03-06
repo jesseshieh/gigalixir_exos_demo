@@ -17,6 +17,7 @@ defmodule GigalixirExosDemoWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/add/:i", PageController, :add
   end
 
   # Other scopes may use custom stacks.
